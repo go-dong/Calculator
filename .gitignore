@@ -1,13 +1,13 @@
 # (주석)See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # (주석)dependencies
-/node_modules
+#/node_modules
 
 # (주석)testing
-/coverage
+#/coverage
 
 # (주석)production
-/build
+#/build
 
 # (주석)misc
 #.DS_Store
