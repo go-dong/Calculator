@@ -16,8 +16,8 @@ class Timeset extends Component {
     this.startDown = this.startDown.bind(this);
   }
 
-  toHHMMSS() {
-      const myNum = parseInt(this.state.startTime, 10);
+  toHHMMSS(time) {
+      const myNum = parseInt(time, 10);
       let hours   = Math.floor(myNum / 3600);
       let minutes = Math.floor((myNum - (hours * 3600)) / 60);
       let seconds = myNum - (hours * 3600) - (minutes * 60);
@@ -35,7 +35,7 @@ class Timeset extends Component {
   }
   breakDown() {
     this.setState({
-      breakGap: this.state.breakGap - 15
+      breakGap: (this.state.breakGap - 15) < 0 ? 0 : this.state.breakGap - 15
     });
   }
   startUp() {
@@ -58,7 +58,7 @@ class Timeset extends Component {
           <button className="break-down" onClick={this.breakDown}>Down</button>
         </div>
         <div className="start-time">
-          <p className="time-label">{this.toHHMMSS()}</p>
+          <p className="time-label">{this.toHHMMSS(this.state.startTime)}</p>
           <button className="start-up" onClick={this.startUp}>Up</button>
           <button className="start-down" onClick={this.startDown}>Down</button>
         </div>
