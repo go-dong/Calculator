@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './timeset.css';
 
-const defaultTime = [0, "24:00"];
+const defaultTime = [0, 86400];
 
 class Timeset extends Component {
   constructor(props) {
@@ -16,6 +16,18 @@ class Timeset extends Component {
     this.startDown = this.startDown.bind(this);
   }
 
+  toHHMMSS() {
+      const myNum = parseInt(this.state.startTime, 10);
+      let hours   = Math.floor(myNum / 3600);
+      let minutes = Math.floor((myNum - (hours * 3600)) / 60);
+      let seconds = myNum - (hours * 3600) - (minutes * 60);
+
+      if (hours   < 10) {hours   = "0"+hours;}
+      if (minutes < 10) {minutes = "0"+minutes;}
+      if (seconds < 10) {seconds = "0"+seconds;}
+      return hours+':'+minutes+':'+seconds;
+  }
+
   breakUp() {
     this.setState({
       breakGap: this.state.breakGap + 15
@@ -26,8 +38,16 @@ class Timeset extends Component {
       breakGap: this.state.breakGap - 15
     });
   }
-  startUp() {}
-  startDown() {}
+  startUp() {
+    this.setState({
+      startTime: (this.state.startTime + 1) > 86400 ? 0 : this.state.startTime + 1
+    });
+  }
+  startDown() {
+    this.setState({
+      startTime: (this.state.startTime - 1) < 0 ? 86400 : this.state.startTime - 1
+    });
+  }
 
   render() {
     return (
@@ -38,7 +58,7 @@ class Timeset extends Component {
           <button className="break-down" onClick={this.breakDown}>Down</button>
         </div>
         <div className="start-time">
-          <p className="time-label">{this.state.startTime}</p>
+          <p className="time-label">{this.toHHMMSS()}</p>
           <button className="start-up" onClick={this.startUp}>Up</button>
           <button className="start-down" onClick={this.startDown}>Down</button>
         </div>
