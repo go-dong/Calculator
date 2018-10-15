@@ -3,6 +3,7 @@ import './timeset.css';
 
 const defaultTime = [0, 86400];
 
+
 class Timeset extends Component {
   constructor(props) {
     super(props);
@@ -68,5 +69,6 @@ class Timeset extends Component {
     )
   }
 }
+
 
 export default Timeset;
