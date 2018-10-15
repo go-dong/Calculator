@@ -1,4 +1,13 @@
 .times-section div{
   display: inline-block;
-  padding: 150px;
+  padding-left: 150px;
+  padding-right: 150px;
+}
+
+.time-label {
+  font-size: 20px;
+}
+
+.time-value {
+  font-size: 30px;
 }

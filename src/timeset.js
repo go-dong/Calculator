@@ -53,14 +53,16 @@ class Timeset extends Component {
     return (
       <div className="times-section">
         <div className="break-time">
-          <p className="time-label">{this.state.breakGap}</p>
-          <button className="break-up" onClick={this.breakUp}>Up</button>
-          <button className="break-down" onClick={this.breakDown}>Down</button>
+          <p className="time-label">Break Length</p>
+          <p className="time-value">{this.state.breakGap}</p>
+          <button className="break-up" onClick={this.breakUp}>+</button>
+          <button className="break-down" onClick={this.breakDown}>-</button>
         </div>
         <div className="start-time">
-          <p className="time-label">{this.toHHMMSS(this.state.startTime)}</p>
-          <button className="start-up" onClick={this.startUp}>Up</button>
-          <button className="start-down" onClick={this.startDown}>Down</button>
+          <p className="time-label">Session Length</p>
+          <p className="time-value" value={this.state.startTime}>{this.toHHMMSS(this.state.startTime)}</p>
+          <button className="start-up" onClick={this.startUp}>+</button>
+          <button className="start-down" onClick={this.startDown}>-</button>
         </div>
       </div>
     )
