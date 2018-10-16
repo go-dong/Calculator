@@ -9,7 +9,7 @@ class Timeset extends Component {
     super(props);
     this.state = {
       breakGap: defaultTime[0],
-      startTime: defaultTime[1]
+      startTime: defaultTime[1],
     }
     this.breakUp = this.breakUp.bind(this);
     this.breakDown = this.breakDown.bind(this);

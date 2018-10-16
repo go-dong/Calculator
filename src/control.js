@@ -7,7 +7,7 @@ class Control extends Component {
     super(props);
     this.state = {
       type: defaultType[0],
-      time: '00:00:00'
+      time: '00:00:00',
     }
     this.timerStart = this.timerStart.bind(this);
     this.timerPause = this.timerPause.bind(this);

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+//import { connect } from 'react-redux';
 import logo from './logo.svg';
 import './App.css';
 
@@ -12,7 +13,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      currentTime: defaultTime
+      currentTime: defaultTime,
     }
   }
   render() {
@@ -28,5 +29,7 @@ class App extends Component {
     );
   }
 }
+
+
 
 export default App;
