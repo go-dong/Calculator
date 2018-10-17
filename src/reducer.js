@@ -17,7 +17,7 @@ const timeChangeReducer = (state = initialState, action) => {
         };
       } else if(action.value === Actions.TIME) {
         return {...state,
-          currentTime: (state.currentTime + action.timeGap) > 86400 ? 0 : ((state.currentTime + action.timeGap) < 0 ? 86400 : state.currentTime + action.timeGap)
+          currentTime: (state.currentTime + action.timeGap) > 86400 ? 0 + (86400 - (state.currentTime + action.timeGap)) : ((state.currentTime + action.timeGap) < 0 ? 86400 + (state.currentTime + action.timeGap) : state.currentTime + action.timeGap)
         };
       } return;
     default: return state;

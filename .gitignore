@@ -1,15 +1,15 @@
-# (주석)See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-# (주석)dependencies
+# dependencies
 /node_modules
 
-# (주석)testing
+# testing
 /coverage
 
-# (주석)production
+# production
 /build
 
-# (주석)misc
+# misc
 .DS_Store
 .env.local
 .env.development.local
