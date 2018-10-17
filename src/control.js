@@ -1,41 +1,35 @@
 import React, { Component } from 'react';
-
-const defaultType = ["pause", "count", "stop"];
+import * as Actions from './actions';
 
 class Control extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      type: defaultType[0],
-      time: '00:00:00',
+      curTime: this.props.store.getState().currentTime
     }
-    this.timerStart = this.timerStart.bind(this);
+    this.startTimer = this.startTimer.bind(this);
     this.timerPause = this.timerPause.bind(this);
     this.timerReset = this.timerReset.bind(this);
   }
-
-  timerStart(event) {
-    this.setState({
-      type: defaultType[1],
-      time: event.target.parentNode.parentNode.parentNode.childNodes[1].childNodes[1].childNodes[1].innerHTML
-    });
+  startTimer() {
+    this.props.store.dispatch(Actions.countDown(this.props.store.getState().currentTime))
   }
   timerPause() {
-    this.setState({
-      type: defaultType[0]
-    });
+    if(this.timer !== null) {
+      clearInterval(this.timer);
+    }
   }
   timerReset() {
-    this.setState({
-      type: defaultType[2]
-    });
+    if(this.timer !== null) {
+      clearInterval(this.timer);
+    }
   }
 
   render() {
     return (
       <div className="control-section">
         <div className="timer-control">
-          <button id="start_stop" onClick={this.timerStart}>▶</button>
+          <button id="start_stop" onClick={this.startTimer}>▶</button>
           <button id="start_stop" onClick={this.timerPause}>Ⅱ</button>
           <button id="reset" onClick={this.timerReset}>■</button>
         </div>

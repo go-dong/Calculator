@@ -1,6 +1,6 @@
 import * as Actions from './actions';
 
-const defaultTime = [15, 0];
+const defaultTime = [15, 86400];
 
 const initialState = {
   type: Actions.STOP,
@@ -20,6 +20,7 @@ const timeChangeReducer = (state = initialState, action) => {
           currentTime: (state.currentTime + action.timeGap) > 86400 ? 0 + (86400 - (state.currentTime + action.timeGap)) : ((state.currentTime + action.timeGap) < 0 ? 86400 + (state.currentTime + action.timeGap) : state.currentTime + action.timeGap)
         };
       } return;
+    case Actions.COUNT: return {...state, currentTime: (action.curTime - 1) < 0 ? 86400 : action.curTime - 1};
     default: return state;
   }
 }

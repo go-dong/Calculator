@@ -1,4 +1,5 @@
 export const STOP = "STOP";
+export const COUNT = "COUNT";
 export const GAP = "GAP"
 export const TIME = "TIME";
 
@@ -15,5 +16,12 @@ export const countTime = (gap) => {
     type: STOP,
     value: TIME,
     timeGap: gap
+  }
+}
+
+export const countDown = (time) => {
+  return {
+    type: COUNT,
+    curTime: time
   }
 }

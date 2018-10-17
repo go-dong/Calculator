@@ -36,7 +36,7 @@ class App extends Component {
             <img src={logo} className="App-logo" alt="logo" />
           </div>
           <Timeset className="timeset" store={this.props.store} gapLevel={this.state.gapLevel} toHHMMSS={this.toHHMMSS}/>
-          <Clock store={this.props.store} toHHMMSS={this.toHHMMSS}/>
+          <Clock store={this.props.store} curTime={this.props.store.getState().currentTime} toHHMMSS={this.toHHMMSS}/>
           <Control store={this.props.store} />
           <button onClick={this.handleClick}>STATE-UP_ONE</button>
           <p>{this.props.store.getState().currentGap}</p>
