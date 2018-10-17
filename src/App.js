@@ -32,7 +32,9 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
+          <div className="App-div">
+            <img src={logo} className="App-logo" alt="logo" />
+          </div>
           <Timeset className="timeset" store={this.props.store} gapLevel={this.state.gapLevel} toHHMMSS={this.toHHMMSS}/>
           <Clock store={this.props.store} toHHMMSS={this.toHHMMSS}/>
           <Control store={this.props.store} />
