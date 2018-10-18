@@ -1,5 +1,5 @@
-import * as Actions from './actions';
-import * as Defaults from './defaults';
+import * as Actions from '../action/actions';
+import * as Defaults from '../defaults';
 
 const timeChangeReducer = (state = Defaults.initialState, action) => {
   switch (action.type) {

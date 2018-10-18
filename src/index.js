@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {createStore} from 'redux';
-import Reducer from './reducer';
-import './index.css';
-import './App.css';
+import Reducer from './reducer/reducer';
+import './css/index.css';
+import './css/App.css';
 import * as serviceWorker from './serviceWorker';
 import Container from './App';
 

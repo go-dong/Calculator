@@ -1,4 +1,4 @@
-import * as Actions from './actions';
+import * as Actions from './action/actions';
 
 export const defaultTime = [15, 86400];
 

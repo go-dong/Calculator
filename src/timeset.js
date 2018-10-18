@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import './timeset.css';
-import * as Actions from './actions';
+import './css/timeset.css';
+import * as Actions from './action/actions';
 
 
 class Timeset extends Component {

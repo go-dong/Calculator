@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import * as Actions from './actions';
+import * as Actions from './action/actions';
 import Timeset from './timeset';
 import Clock from './clock';
 import Control from './control';
