@@ -39,7 +39,7 @@ class App extends Component {
           <Clock store={this.props.store} curTime={this.props.store.getState().currentTime} toHHMMSS={this.toHHMMSS}/>
           <Control store={this.props.store} />
           <button onClick={this.handleClick}>STATE-UP_ONE</button>
-          <p>{this.props.store.getState().currentGap}</p>
+          <p>gap:{this.props.store.getState().currentGap}<br />time:{this.props.store.getState().currentTime}</p>
         </header>
       </div>
     );

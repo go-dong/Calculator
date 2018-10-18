@@ -1,14 +1,7 @@
 import * as Actions from './actions';
+import * as Defaults from './defaults';
 
-const defaultTime = [15, 86400];
-
-const initialState = {
-  type: Actions.STOP,
-  currentGap: defaultTime[0],
-  currentTime: defaultTime[1]
-}
-
-const timeChangeReducer = (state = initialState, action) => {
+const timeChangeReducer = (state = Defaults.initialState, action) => {
   switch (action.type) {
     case Actions.STOP:
       if(action.value === Actions.GAP) {
@@ -17,10 +10,10 @@ const timeChangeReducer = (state = initialState, action) => {
         };
       } else if(action.value === Actions.TIME) {
         return {...state,
-          currentTime: (state.currentTime + action.timeGap) > 86400 ? 0 + (86400 - (state.currentTime + action.timeGap)) : ((state.currentTime + action.timeGap) < 0 ? 86400 + (state.currentTime + action.timeGap) : state.currentTime + action.timeGap)
+          currentTime: ((state.currentTime + action.timeGap) > 86400) ? 0 + ((state.currentTime + action.timeGap) - 86400) : ((state.currentTime + action.timeGap) < 0 ? (86400 + (state.currentTime + action.timeGap)) : (state.currentTime + action.timeGap))
         };
-      } return;
-    case Actions.COUNT: return {...state, currentTime: (action.curTime - 1) < 0 ? 86400 : action.curTime - 1};
+      } return state;
+    case Actions.COUNT: return {...state, currentTime: (action.curTime < 1 ? 86400 : (action.curTime - 1))};
     default: return state;
   }
 }
