@@ -13,7 +13,7 @@ const timeChangeReducer = (state = Defaults.initialState, action) => {
           currentTime: ((state.currentTime + action.timeGap) > 86400) ? 0 + ((state.currentTime + action.timeGap) - 86400) : ((state.currentTime + action.timeGap) < 0 ? (86400 + (state.currentTime + action.timeGap)) : (state.currentTime + action.timeGap))
         };
       } return state;
-    case Actions.COUNT: return {...state, currentTime: (action.curTime < 1 ? 86400 : (action.curTime - 1))};
+    case Actions.COUNT: return {...state, currentTime: action.curTime};
     default: return state;
   }
 }

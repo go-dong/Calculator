@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import * as Actions from './actions';
 import Timeset from './timeset';
-import Clock from './clock';
 import Control from './control';
 import {connect} from 'react-redux';
 
@@ -36,8 +35,7 @@ class App extends Component {
             <img src={logo} className="App-logo" alt="logo" />
           </div>
           <Timeset className="timeset" store={this.props.store} gapLevel={this.state.gapLevel} toHHMMSS={this.toHHMMSS}/>
-          <Clock store={this.props.store} curTime={this.props.store.getState().currentTime} toHHMMSS={this.toHHMMSS}/>
-          <Control store={this.props.store} />
+          <Control store={this.props.store} toHHMMSS={this.toHHMMSS}/>
           <button onClick={this.handleClick}>STATE-UP_ONE</button>
           <p>gap:{this.props.store.getState().currentGap}<br />time:{this.props.store.getState().currentTime}</p>
         </header>

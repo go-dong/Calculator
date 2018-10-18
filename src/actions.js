@@ -19,7 +19,7 @@ export const countTime = (gap) => {
   }
 }
 
-export const countDown = (time) => {
+export const resetTime = (time) => {
   return {
     type: COUNT,
     curTime: time
