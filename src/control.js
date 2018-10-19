@@ -22,7 +22,7 @@ class Control extends Component {
       this.setState({
         curTime: this.state.curTime - 1
       });
-      console.log("curTime:, ", this.state.curTime);
+      console.log("curTime:, ", this.props.toHHMMSS(this.state.curTime));
       if(this.state.curTime < 1) {
         clearInterval(this.timer);
       }

@@ -23,7 +23,6 @@ class Timeset extends Component {
   }
   timePlusClick() {
     this.props.store.dispatch(Actions.countTime(this.props.store.getState().currentGap));
-    console.log(this.props.store.getState().currentTime);
   }
   timeMinusClick() {
     this.props.store.dispatch(Actions.countTime(-this.props.store.getState().currentGap));

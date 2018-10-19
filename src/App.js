@@ -36,8 +36,6 @@ class App extends Component {
           </div>
           <Timeset className="timeset" store={this.props.store} gapLevel={this.state.gapLevel} toHHMMSS={this.toHHMMSS}/>
           <Control store={this.props.store} toHHMMSS={this.toHHMMSS}/>
-          <button onClick={this.handleClick}>STATE-UP_ONE</button>
-          <p>gap:{this.props.store.getState().currentGap}<br />time:{this.props.store.getState().currentTime}</p>
         </header>
       </div>
     );
