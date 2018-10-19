@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.2/workbox-sw.js");
 
 importScripts(
-  "foresthb.github.io/PomodoroTimer/precache-manifest.fbcaaae08a6ec13dbba18054c6e7c2a1.js"
+  "/PomodoroTimer/precache-manifest.e68110157d884c16b34b8509e2acb671.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("foresthb.github.io/PomodoroTimer/index.html", {
+workbox.routing.registerNavigationRoute("/PomodoroTimer/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });

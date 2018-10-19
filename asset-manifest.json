@@ -1,14 +1,14 @@
 {
-  "main.css": "foresthb.github.io/PomodoroTimer/static/css/main.3b4bfb52.chunk.css",
-  "main.js": "foresthb.github.io/PomodoroTimer/static/js/main.53d114b4.chunk.js",
-  "main.js.map": "foresthb.github.io/PomodoroTimer/static/js/main.53d114b4.chunk.js.map",
-  "static/js/1.4fe9b2cc.chunk.js": "foresthb.github.io/PomodoroTimer/static/js/1.4fe9b2cc.chunk.js",
-  "static/js/1.4fe9b2cc.chunk.js.map": "foresthb.github.io/PomodoroTimer/static/js/1.4fe9b2cc.chunk.js.map",
-  "runtime~main.js": "foresthb.github.io/PomodoroTimer/static/js/runtime~main.837f8c73.js",
-  "runtime~main.js.map": "foresthb.github.io/PomodoroTimer/static/js/runtime~main.837f8c73.js.map",
-  "static/media/logo.svg": "foresthb.github.io/PomodoroTimer/static/media/logo.5d5d9eef.svg",
-  "static/css/main.3b4bfb52.chunk.css.map": "foresthb.github.io/PomodoroTimer/static/css/main.3b4bfb52.chunk.css.map",
-  "index.html": "foresthb.github.io/PomodoroTimer/index.html",
-  "precache-manifest.fbcaaae08a6ec13dbba18054c6e7c2a1.js": "foresthb.github.io/PomodoroTimer/precache-manifest.fbcaaae08a6ec13dbba18054c6e7c2a1.js",
-  "service-worker.js": "foresthb.github.io/PomodoroTimer/service-worker.js"
+  "main.css": "/PomodoroTimer/static/css/main.3b4bfb52.chunk.css",
+  "main.js": "/PomodoroTimer/static/js/main.dbdf6384.chunk.js",
+  "main.js.map": "/PomodoroTimer/static/js/main.dbdf6384.chunk.js.map",
+  "static/js/1.4fe9b2cc.chunk.js": "/PomodoroTimer/static/js/1.4fe9b2cc.chunk.js",
+  "static/js/1.4fe9b2cc.chunk.js.map": "/PomodoroTimer/static/js/1.4fe9b2cc.chunk.js.map",
+  "runtime~main.js": "/PomodoroTimer/static/js/runtime~main.5faadcdf.js",
+  "runtime~main.js.map": "/PomodoroTimer/static/js/runtime~main.5faadcdf.js.map",
+  "static/media/logo.svg": "/PomodoroTimer/static/media/logo.5d5d9eef.svg",
+  "static/css/main.3b4bfb52.chunk.css.map": "/PomodoroTimer/static/css/main.3b4bfb52.chunk.css.map",
+  "index.html": "/PomodoroTimer/index.html",
+  "precache-manifest.e68110157d884c16b34b8509e2acb671.js": "/PomodoroTimer/precache-manifest.e68110157d884c16b34b8509e2acb671.js",
+  "service-worker.js": "/PomodoroTimer/service-worker.js"
 }
